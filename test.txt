@@ -1,0 +1,4 @@
+lab 1:- Implementing Cloud SQL completed 
+lab 2:- Cloud Storage
+Two labs completed of Essential Google Cloud 
+Infrastructure: Core Services
