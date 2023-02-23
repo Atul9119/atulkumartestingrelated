@@ -1,0 +1,13 @@
+node{
+    stage('SCM Checkout'){
+        git branch: 'main', credentialsId: 'access-token-1', url: 'https://github.com/manojsharmadcx/composable-commerce.git'
+    }
+    stage('build the image'){
+        sh 'docker build -t storefront-nextjs-app -f storefront-nextjs/Dockerfile storefront-nextjs'
+    }
+  
+    
+    stage('run the image'){
+        sh 'docker run -dp 3001:3000 --name myapp storefront-nextjs-app'
+    }
+}
